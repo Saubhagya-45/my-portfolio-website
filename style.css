@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    background: #f4f4f4;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+}
+
+.hero-text span {
+    color: #0077cc;
+}
+
+.hero-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #0077cc;
+}
+
+.about, .projects, .contact {
+    padding: 2rem;
+}
+
+.about h3 {
+    margin-top: 1.5rem;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+.skill label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 20px;
+  width: 0;
+  animation: fillProgress 2s forwards;
+}
+
+.progress.html {
+  background-color: #e44d26; /* HTML orange */
+  width: 90%;
+}
+
+.progress.css {
+  background-color: #264de4; /* CSS blue */
+  width: 85%;
+}
+
+.progress.js {
+  background-color: #f0db4f; /* JS yellow */
+  width: 70%;
+}
+
+.progress.cpp {
+  background-color: #00599c; /* C++ blue */
+  width: 60%;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: inherit;
+  }
+}
+
+.projects {
+    background: #f9f9f9;
+}
+
+.project-card {
+    background: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    margin-top: 2rem;
+}
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content,
+.about,
+.projects,
+.contact {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+/* Staggered fade-in for each section */
+.about {
+  animation-delay: 0.5s;
+}
+
+.projects {
+  animation-delay: 0.7s;
+}
+
+.contact {
+  animation-delay: 0.9s;
+}
+
+/* Nav links hover */
+nav ul li a {
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+/* Project card hover */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Profile image hover zoom */
+.hero-image img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
